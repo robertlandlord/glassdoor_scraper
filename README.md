@@ -10,6 +10,7 @@ In order to run this program and edit it for different companies, you will need 
 
 # Editing the Company:
 To edit which company you are finding the reviews for, follow these steps:
+
 **1. Navigate to the company's reviews page. For example, to get to US Bank's company review page, I might go through the following steps:**
     a. Go to https://www.glassdoor.com/index.htm
     b. Press "Company Reviews" on the top left of the menu
