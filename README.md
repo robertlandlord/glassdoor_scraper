@@ -15,10 +15,8 @@ To edit which company you are finding the reviews for, follow these steps:
     b. Press "Company Reviews" on the top left of the menu
         ![N|Solid](https://i.imgur.com/PKPQIsT.png "company-review")
     c. In the search bar, search "US Bank" and press the matching result
-
     d. You should reach a page like this: 
         ![N|Solid](https://i.imgur.com/BY5KuVR.png)
-        
     e. Now, press the "Reviews" tab in the menu under the name of your company:
         ![N|Solid](https://i.imgur.com/ztllrQw.png)
     f. Copy the URL from the top of the page. It should be similar to this: "https://www.glassdoor.com/Reviews/U-S-Bank-Reviews-E8937.htm"
