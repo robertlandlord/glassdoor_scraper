@@ -11,7 +11,7 @@ In order to run this program and edit it for different companies, you will need 
 # Editing the Company:
 To edit which company you are finding the reviews for, follow these steps:
 
-**1. Navigate to the company's reviews page. For example, to get to US Bank's company review page, I might go through the following steps:**
+**1. Navigate to the company's reviews page. For example, to get to US Bank's company review page, I might go through the following steps:**  
     a. Go to https://www.glassdoor.com/index.htm
     b. Press "Company Reviews" on the top left of the menu
         ![N|Solid](https://i.imgur.com/PKPQIsT.png "company-review")
@@ -26,6 +26,7 @@ To edit which company you are finding the reviews for, follow these steps:
     h. HOLD ON to this URL, you will need it in the next step.
     
 **2. Edit the Code in a Python environment**
+
     a. Open up the code in an editor or IDE. I will use PyCharm for my example.
     b. Find the line that starts with "url_link =". It should be on line 7 if no changes were made.
         Note: If you can't find it, you can also use [CTRL]+[F] to search for the string
