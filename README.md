@@ -28,10 +28,10 @@ To edit which company you are finding the reviews for, follow these steps:
 **2. Edit the Code in a Python environment**  
     a. Open up the code in an editor or IDE. I will use PyCharm for my example.
     b. Find the line that starts with "url_link =". It should be on line 7 if no changes were made.
-        Note: If you can't find it, you can also use [CTRL]+[F] to search for the string
-        ![N|Solid](https://i.imgur.com/ERWh4U3.png)
-    c. Replace the link in the quotes with the link you found and edited above.
-        ![N|Solid](https://i.imgur.com/Zi675FB.png)
+        Note: If you can't find it, you can also use [CTRL]+[F] to search for the string  
+        ![N|Solid](https://i.imgur.com/ERWh4U3.png)  
+    c. Replace the link in the quotes with the link you found and edited above.  
+        ![N|Solid](https://i.imgur.com/Zi675FB.png)  
     d. Run the program! :)
     
 # Getting your data
