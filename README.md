@@ -14,13 +14,13 @@ To edit which company you are finding the reviews for, follow these steps:
 **1. Navigate to the company's reviews page. For example, to get to US Bank's company review page, I might go through the following steps:**  
     a. Go to https://www.glassdoor.com/index.htm  
     b. Press "Company Reviews" on the top left of the menu  
-        ![N|Solid](https://i.imgur.com/PKPQIsT.png "company-review")
-    c. In the search bar, search "US Bank" and press the matching result
+        ![N|Solid](https://i.imgur.com/PKPQIsT.png "company-review")  
+    c. In the search bar, search "US Bank" and press the matching result  
     d. You should reach a page like this: 
-        ![N|Solid](https://i.imgur.com/BY5KuVR.png)
-    e. Now, press the "Reviews" tab in the menu under the name of your company:
-        ![N|Solid](https://i.imgur.com/ztllrQw.png)
-    f. Copy the URL from the top of the page. It should be similar to this: "https://www.glassdoor.com/Reviews/U-S-Bank-Reviews-E8937.htm"
+        ![N|Solid](https://i.imgur.com/BY5KuVR.png)  
+    e. Now, press the "Reviews" tab in the menu under the name of your company:  
+        ![N|Solid](https://i.imgur.com/ztllrQw.png)  
+    f. Copy the URL from the top of the page. It should be similar to this: "https://www.glassdoor.com/Reviews/U-S-Bank-Reviews-E8937.htm"  
     g. Now, append "_P1" after the numbers at the end of the url and before the .htm, so that your url looks like this:
     "https://www.glassdoor.com/Reviews/U-S-Bank-Reviews-E8937_P1.htm"
     h. HOLD ON to this URL, you will need it in the next step.
