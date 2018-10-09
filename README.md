@@ -5,8 +5,9 @@
 
 In order to run this program and edit it for different companies, you will need the following:
 1. High-speed, STABLE, internet connection
-2. A text editor (or Python IDE)
-3. A way to run Python code (will be easier with an IDE like Pycharm or Anaconda)
+2. [Chomedriver](http://chromedriver.chromium.org/downloads)  
+3. A text editor (or Python IDE)
+4. A way to run Python code (will be easier with an IDE like Pycharm or Anaconda)
 
 # Editing the Company:
 To edit which company you are finding the reviews for, follow these steps:
