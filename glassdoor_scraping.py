@@ -4,13 +4,14 @@ from selenium import *
 import xlwt
 
 
-url_link = "https://www.glassdoor.com/Reviews/Wells-Fargo-Reviews-E8876_P1.htm"
+url_link = "https://www.glassdoor.com/Reviews/Wipro-Reviews-E9936_P1.htm"
 company_info = xlwt.Workbook(encoding="utf-8")
 name = input("What would you like to name the file?") + ".csv"
+sample_size = (input("How much data do you want? (5000 would give 5000 reviews) Enter 'all' for full data"))
 
 
 
-def scrape(base_url, workbook, name):
+def scrape(base_url, workbook, name, ss):
     worksheet = workbook.add_sheet("sheet1", cell_overwrite_ok=True)
     worksheet.write(0, 1, "Title")
     worksheet.write(0, 2, "Date Written")
@@ -35,7 +36,7 @@ def scrape(base_url, workbook, name):
     password = driver.find_element_by_name("password")
     password.send_keys("glassdoor")
     driver.find_element_by_xpath("//*[@class='gd-btn gd-btn-1 fill']").click()
-
+    sample_size = ss
     # after login
     try:
         # go to first link
@@ -50,7 +51,12 @@ def scrape(base_url, workbook, name):
         # this is the current page we are on
         page = int(page)
         counter = 0
-        while True:
+        loop_count = 0
+        if sample_size == "all":
+            sample_size = 99999
+        else:
+            sample_size = int(sample_size)
+        while loop_count < sample_size/10:
             # search the company
             # ~~~~~~~~~~~~~~~~~~~TITLE OF REVIEW~~~~~~~~~~~~~~~~~~~~~~
             titles = driver.find_elements_by_class_name("reviewLink")
@@ -66,6 +72,8 @@ def scrape(base_url, workbook, name):
             for datetime in timestamps:
                 if datetime.text[:3] in datelist:
                     true_timestamps.append(datetime.text)
+                else:
+                    true_timestamps.append("no-date")
 
 
 
@@ -140,7 +148,8 @@ def scrape(base_url, workbook, name):
                 prosarr.append(pros)
                 consarr.append(cons)
                 advarr.append(advice)
-
+                print(len(titlearr))
+                print(len(true_timestamps))
 
             for index in range(0, len(titlearr)):
                 print("INDEX IS: ", index)
@@ -157,6 +166,7 @@ def scrape(base_url, workbook, name):
                 worksheet.write(int(page)*10+index, 10, prosarr[index])
                 worksheet.write(int(page)*10+index, 11, consarr[index])
                 worksheet.write(int(page)*10+index, 12, advarr[index])
+            loop_count += 1
             try:
                 found = driver.find_element_by_css_selector("#FooterPageNav > div > ul > li.page.current.last > span")
                 print(found.text)
@@ -168,11 +178,14 @@ def scrape(base_url, workbook, name):
                 driver.get(basic+str(page)+".htm")
                 print("clicked page", str(page))
 
+        workbook.save(name)
+        print("done")
+
     except NoSuchElementException:
         workbook.save(name)
         print("finished")
 
 
-scrape(url_link, company_info, name)
+scrape(url_link, company_info, name, sample_size)
 
 
